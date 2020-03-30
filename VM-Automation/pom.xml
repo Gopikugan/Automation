@@ -148,7 +148,7 @@
   </dependencies>
   <build>
 		<plugins>
-	      <plugin>
+	      <!-- <plugin>
 	        <groupId>org.codehaus.mojo</groupId>
 	        <artifactId>properties-maven-plugin</artifactId>
 	        <version>1.0.0</version>
@@ -165,7 +165,7 @@
 	            </configuration>
 	          </execution>
 	        </executions>
-	      </plugin>
+	      </plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -185,9 +185,9 @@
 					<suiteXmlFiles> 
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					<systemProperties>
+					<!-- <systemProperties>
 		                <cucumber.options>${options.tags}</cucumber.options>
-		            </systemProperties>
+		            </systemProperties> -->
 				</configuration>
 			</plugin>
 			

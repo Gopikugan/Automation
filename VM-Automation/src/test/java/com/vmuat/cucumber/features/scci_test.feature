@@ -1,10 +1,11 @@
+@Dummy_Demo
 Feature: Validate SCCI functionality
 	Description: This feature will do the regression test for Project Version 2.3
 Background: Lead was created
 	Given User logged to salesforce Application with username and password
 	And User create new lead
 
-@Demo
+
 Scenario: Verify all necessary options are available for selection
 	And User convert this lead
 	And User navigates to oppurtunity page
@@ -33,8 +34,6 @@ Scenario: Verify all necessary options are available for selection
 	| Legal - Direct         | NDA-D        |
 
 
-
-@Dummy_Demo
 Scenario Outline: Verify user able to create sales engagement
 	And User convert this lead
 	And User navigates to oppurtunity page

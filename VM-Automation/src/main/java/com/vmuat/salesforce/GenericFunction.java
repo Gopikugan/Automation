@@ -9,7 +9,10 @@ public class GenericFunction extends Base{
 	public Properties prop;
 	
 	
-	public GenericFunction startApplication(String url) {
+	public GenericFunction startApplication(String url, String testName, String testDescription, String authour, String catagory) {
+		
+		setTestcase(testName, testDescription, authour, catagory);
+		
 		driver = startApp(url);
 		node = test.createNode(testCaseName);
 		return this;
@@ -20,15 +23,19 @@ public class GenericFunction extends Base{
 		return new LoginPage(driver, node, test);
 	}
 	
+	public com.demo.webmail.LoginPage getWebMailLoginPage() {
+		return new com.demo.webmail.LoginPage(driver, node, test);
+	}
+	
 	public void closeApplication() {
 		close();
 		
 	}
 	
-	public void setTestcase(String testName, String testDescription, String testNodes, String authour, String catagory) {
+	public void setTestcase(String testName, String testDescription, String authour, String catagory) {
 		testCaseName = testName;
 		testCaseDescription = testDescription;
-		nodes = testNodes;
+		nodes = "NODES";
 		authors = authour;
 		category = catagory;
 		

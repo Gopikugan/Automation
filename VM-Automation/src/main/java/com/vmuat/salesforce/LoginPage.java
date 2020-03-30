@@ -48,11 +48,6 @@ public class LoginPage extends Base{
 	}
 	
 	
-	
-	
-	
-	
-	
 	/*
 	 * 
 	 * 
@@ -73,9 +68,6 @@ public class LoginPage extends Base{
 		return getLoginPage()
 				.clickLogin();
 	}
-	
-	
-	
 	
 	
 	

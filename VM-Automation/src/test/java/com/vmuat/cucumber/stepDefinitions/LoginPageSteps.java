@@ -32,7 +32,7 @@ public class LoginPageSteps{
 	public void user_logged_to_salesforce_with_username_and_password() {
 		
 	
-		loginpage = new GenericFunction().startApplication("https://test.salesforce.com/")
+		loginpage = new GenericFunction().startApplication("https://test.salesforce.com/", "", "", "", "")
 										.getLoginPage();
 		
 		homepage =  loginpage.getLoginPage()

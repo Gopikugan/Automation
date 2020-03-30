@@ -194,6 +194,9 @@ public class Base extends ExtentReport implements Browser, Element{
 
 	@Override
 	public boolean verifyDisplayed(WebElement ele) {
+		wait = new WebDriverWait(driver, ConfigurationManager.getInstance().getbrowserConfig().getMaximumWait());
+		wait.until(ExpectedConditions.visibilityOfAllElements(ele));
+		
 		ele.isDisplayed();
 		try {
 			ele.isDisplayed();
