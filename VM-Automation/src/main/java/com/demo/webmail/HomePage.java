@@ -28,8 +28,10 @@ public class HomePage extends Base{
 	@FindBy(how = How.XPATH, using = "//div[@aria-label = 'Mail']")
 	private WebElement homePageIdentifier;
 	
-	@FindBy(how = How.XPATH, using = "//div[@aria-label = 'Sign out']")
-	private WebElement titleIdentifier;
+	/*
+	 * @FindBy(how = How.XPATH, using = "//head//title") private WebElement
+	 * titleIdentifier;
+	 */
 	
 	
 	@FindBy(how = How.XPATH, using = "//div[@aria-label = 'User settings']//span[contains(@class, 'presence') and not(contains(@style, 'display: none'))]")
@@ -48,9 +50,6 @@ public class HomePage extends Base{
 		return new HomePage(driver, node, test);
 	}
 	
-	public String getPageTitle() {
-		return getElementText(titleIdentifier).toString();
-	}
 	
 	public LoginPage logout() {
 		click(avatarIdentifier);
@@ -59,7 +58,11 @@ public class HomePage extends Base{
 	}
 	
 	public void verifyExactTitle(String expected) {
-		Assert.assertEquals(getPageTitle(), expected);
+		if(verifyTitle(expected)) {
+			System.out.println("Verification sucessfull: Page title: \"" + expected + "\"");
+		}else {
+			
+		}
 	}
 	
 }

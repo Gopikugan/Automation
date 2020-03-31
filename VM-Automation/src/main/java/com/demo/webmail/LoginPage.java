@@ -23,9 +23,9 @@ public class LoginPage extends Base{
 	@FindBy(how = How.XPATH, using = "//div[@id='lgnDiv']")					private WebElement loginPageIdentifier;
 	@FindBy(how = How.XPATH, using = "//input[@id='username']")				private WebElement usernameIdentifier;
 	@FindBy(how = How.XPATH, using = "//input[@id='password']")				private WebElement passwordIdentifier;
-	@FindBy(how = How.XPATH, using = "//div[@class='signinbutton']")	private WebElement loginbuttonIdentifier;
+	@FindBy(how = How.XPATH, using = "//div[@class='signinbutton']")		private WebElement loginbuttonIdentifier;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id= 'signInErrorDiv']")	private WebElement signInErrorIdentifier;
+	@FindBy(how = How.XPATH, using = "//div[@id= 'signInErrorDiv']")		private WebElement signInErrorIdentifier;
 	
 	public LoginPage checkLoginPage(){
 		verifyDisplayed(loginPageIdentifier);
@@ -82,7 +82,10 @@ public class LoginPage extends Base{
 		
 	}
 	public void verifyErrorMsg() {
-		Assert.assertEquals(getErrorMessage(), true);
+		String text = getErrorMessage();
+		if(!text.isEmpty()) {
+			System.out.println("Verification sucessfull: Error message : \"" + text + "\"");
+		}
 		
 	}
 	

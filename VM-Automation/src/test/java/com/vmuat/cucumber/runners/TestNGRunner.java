@@ -15,7 +15,7 @@ import cucumber.api.testng.TestNGCucumberRunner;*/
 		 strict = true, 
 		 features = {"./src/test/java/com/vmuat/cucumber/features"},
 		 glue = {"com.vmuat.cucumber.stepDefinitions"},
-		 tags= {"@Dummy_Demo"},
+		 tags= {"@Demo"},
 		 dryRun = false,
 		 monochrome = true,
 		 plugin= {"pretty",

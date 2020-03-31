@@ -23,9 +23,9 @@ Scenario Outline: Verify user shoud not login to application with invalid creden
 	When user try to login with invalid credentials "<username>" and "<password>"
 	Then verify appropirate error message gets displayed
 Examples:
-	|username				|password	|
-	|gopinath.m@prodapt.com	|Kugan@20	|
-	|gopi123.m@prodapt.com	|Kugan@36	|
+	|username					|password	|
+	|gopinath1.m@prodapt.com	|Test@20	|
+	|gopi123.m@prodapt.com		|Test@36	|
 
 
 #@Regression

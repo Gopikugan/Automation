@@ -47,7 +47,7 @@ public class DemoSteps {
 	@Then("verify the title of inbox page")
 	public void verify_the_title_of_inbox_page(DataTable dataTable) {
 		for (Map<String, String> data : dataTable.asMaps()) {
-			homepage.verifyExactTitle(data.get("title"));
+			homepage.getHomePage().verifyExactTitle(data.get("title"));
 		}
 	}
 

@@ -97,6 +97,8 @@ public class Base extends ExtentReport implements Browser, Element{
 
 	@Override
 	public String getElementText(WebElement ele) {
+		wait = new WebDriverWait(driver, ConfigurationManager.getInstance().getbrowserConfig().getMaximumWait());
+		wait.until(ExpectedConditions.visibilityOfAllElements(ele));
 		String text = ele.getText();
 		return text;
 	}
